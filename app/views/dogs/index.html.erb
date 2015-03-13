@@ -1,0 +1,7 @@
+<h1>Dogs in the Database</h1>
+<% @dogs.each do |d| %> <!-- Iterates through each dog under the variable d -->
+  <p>Name: <%= link_to d.name, dog_path(d) %> </p> <!-- Show the dog's name-->
+  <p>Age : <%= d.age %> </p> <!-- Show the dog's age -->
+  <p>~*~*~*~*</p>
+<% end %>
+<%= link_to "new", dogs_new_path %> <!-- Create a link that appears as "new" that leads to dogs_new_path -->
